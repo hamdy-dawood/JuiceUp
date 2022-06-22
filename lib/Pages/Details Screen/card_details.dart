@@ -50,18 +50,21 @@ class _CardDetailsState extends State<CardDetails> {
             height: size.height / 2,
             child: Stack(
               children: [
-                Container(
-                  height: size.height / 2.1,
-                  width: size.width,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      widget.details.image,
-                      fit: BoxFit.cover,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Container(
+                    height: size.height / 2.1,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: textColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        widget.details.image,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),

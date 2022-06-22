@@ -85,7 +85,8 @@ class _MyCartState extends State<MyCart> {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              width: double.infinity,
               decoration: const BoxDecoration(
                   color: backGround,
                   borderRadius: BorderRadius.only(
@@ -113,7 +114,7 @@ class _MyCartState extends State<MyCart> {
                               height: 20.0,
                             ),
                         // itemCount: popular.length
-                        itemCount: productQuantity(popular).keys.length),
+                        itemCount: productQuantity(drinks).keys.length),
                   ),
                 ),
               ),

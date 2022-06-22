@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../Categories/categories_list.dart';
-
 import '../Home Page/home_page.dart';
 
 class BuildCartItem extends StatefulWidget {
@@ -22,11 +21,12 @@ class _BuildCartItemState extends State<BuildCartItem> {
   int counter = 1;
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Row(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height / 4.4,
-          width: MediaQuery.of(context).size.width / 2.5,
+          height: size.height / 4.4,
+          width: size.width / 2.5,
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
           child: ClipRRect(
@@ -41,7 +41,7 @@ class _BuildCartItemState extends State<BuildCartItem> {
           child: Column(
             children: [
               Text(
-                widget.popular.name,
+                widget.drinks.name,
                 style: const TextStyle(
                     color: textColor,
                     fontSize: 22.0,
@@ -51,7 +51,7 @@ class _BuildCartItemState extends State<BuildCartItem> {
                 height: 10.0,
               ),
               Text(
-                '\$ ${widget.popular.price}',
+                '\$ ${widget.drinks.price}',
                 style: const TextStyle(
                     color: textColor,
                     fontSize: 25.0,
